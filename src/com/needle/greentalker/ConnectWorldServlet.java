@@ -2,38 +2,41 @@ package com.needle.greentalker;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ConnectWorldServlet
+ * 
  */
-@WebServlet("/ConnectWorldServlet")
 public class ConnectWorldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ConnectWorldServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+     * 
+     */
+	public ConnectWorldServlet() {
+		super();
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * 处理http get请求
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		ConnectWorld connectWorld = new ConnectWorld(request);
+		String result = connectWorld.execute();
+		response.getOutputStream().write(result.getBytes());
+	}
+
+	/**
+	 * 处理http post请求
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		ConnectWorld connectWorld = new ConnectWorld(request);
+		String result = connectWorld.execute();
+		response.getOutputStream().write(result.getBytes());
 	}
 
 }

@@ -5,7 +5,7 @@ import org.sword.wechat4j.WechatSupport;
 
 public class ConnectWorld extends WechatSupport{
      
-	public ConnectWorld(HttpServletRequest request, String token){
+	public ConnectWorld(HttpServletRequest request){
 		super(request);
 	}
 	

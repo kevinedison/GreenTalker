@@ -9,4 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ConnectWorldServlet</display-name>
+    <servlet-name>ConnectWorldServlet</servlet-name>
+    <servlet-class>com.needle.greentalker.ConnectWorldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ConnectWorldServlet</servlet-name>
+  <url-pattern>http://greentalker.sinaapp.com/greentalker</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
