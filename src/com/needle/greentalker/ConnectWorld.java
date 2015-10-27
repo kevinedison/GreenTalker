@@ -17,7 +17,7 @@ public class ConnectWorld extends WechatSupport{
 
 	@Override
 	protected void onImage() {
-		// TODO 自动生成的方法存根
+		responseImage("2046");
 		
 	}
 
